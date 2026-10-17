@@ -11,11 +11,11 @@ import {
 const U = (id) => (id.startsWith('/') || id.startsWith('http')) ? id : `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=600&q=80`;
 
 const CONFIG = {
-    passcodeDigits: "18102021", // Chấp nhận: 18.10.2021, 18/10/2021, 18-10-2021, 18102021
+    passcodeDigits: "18102022", // Chấp nhận: 18.10.2022, 18/10/2022, 18-10-2022, 18102022
     passcodeHint: "Gợi ý nhỏ: Ngày đặc biệt tụi mình chính thức quen nhau (đủ ngày tháng năm nhé) 💕",
     boyfriendName: "Anh Người Yêu",
     girlfriendName: "Công Chúa",
-    boyfriendContactUrl: "https://m.me/",
+    boyfriendContactUrl: "https://m.me/100046166451971",
 
     bgmOptions: [
         {
@@ -1317,7 +1317,7 @@ function MagicCups({ burst }) {
             // Sao chep san vao clipboard de nguoi dung tien gui
             const msg = `Anh yêu ơi! Em vừa bốc trúng giải TIỀN MẶT ${chosen.amount} 💸 với MÃ XÁC THỰC ĐỘC QUYỀN: [${chosen.code}] 🎁 Mau chuyển khoản lì xì sinh nhật cho em đi nào!! 💖`;
             if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(msg).catch(() => {});
+                navigator.clipboard.writeText(msg).catch(() => { });
             }
         }
     };
@@ -1569,7 +1569,7 @@ export default function App() {
     useEffect(() => {
         if (!audioRef.current) return;
         if (musicOn) {
-            audioRef.current.play().catch(() => {});
+            audioRef.current.play().catch(() => { });
         } else {
             audioRef.current.pause();
         }
@@ -1583,7 +1583,7 @@ export default function App() {
             snd.start();
         } else if (musicOn) {
             snd.stop();
-            if (audioRef.current) audioRef.current.play().catch(() => {});
+            if (audioRef.current) audioRef.current.play().catch(() => { });
         }
     }, [step, musicOn]);
 

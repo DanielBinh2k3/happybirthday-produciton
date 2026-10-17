@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#fff1f5" />
+    <title>Happy Birthday! 🎂</title>
+    <!-- Tailwind CSS CDN for instant styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Mobile touch optimization */
+      * {
+        -webkit-tap-highlight-color: transparent;
+      }
+      html, body {
+        overscroll-behavior-y: none;
+        touch-action: manipulation;
+      }
+    </style>
+  </head>
+  <body class="bg-pink-50 min-h-screen antialiased selection:bg-pink-200 selection:text-pink-800">
+    <div id="root"></div>
+    <script type="module" src="/main.jsx"></script>
+  </body>
+</html>

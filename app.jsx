@@ -103,11 +103,11 @@ const CONFIG = {
         ["1513279922550-250c2129b13a", "Mãi bên nhau nhé 💍"]
     ],
 
-    // Giải thưởng tiền mặt (Màn 4) — cốc 0/1/2 tương ứng 36/69/96
+    // Giải thưởng tiền mặt (Màn 4) — cốc 0/1/2 tương ứng 36k/69k/96k
     cashPrizes: [
-        { amount: "500.000đ", code: "HBD2026-9E4B-8F12", label: "Lộc Phát May Mắn", desc: "Bao lì xì tiền mặt 500.000đ 💸" },
-        { amount: "1.000.000đ", code: "LOVE-7C3A-DF91-88E4", label: "Tình Yêu Vĩnh Cửu", desc: "Bao lì xì tiền mặt 1.000.000đ 💸" },
-        { amount: "2.000.000đ", code: "KISS-4B9F-83EC-71A0", label: "Đại Lộc Phú Quý", desc: "Bao lì xì tiền mặt 2.000.000đ siêu to 💸" }
+        { amount: "36.000đ", code: "HBD2026-9E4B-8F12", label: "Lộc Phát May Mắn", desc: "Bao lì xì tiền mặt 36.000đ may mắn 💸" },
+        { amount: "69.000đ", code: "LOVE-7C3A-DF91-88E4", label: "Tình Yêu Vĩnh Cửu", desc: "Bao lì xì tiền mặt 69.000đ ngọt ngào 💸" },
+        { amount: "96.000đ", code: "KISS-4B9F-83EC-71A0", label: "Đại Lộc Phú Quý", desc: "Bao lì xì tiền mặt 96.000đ siêu to 💸" }
     ]
 };
 
@@ -1230,7 +1230,7 @@ function MagicCups({ burst }) {
     const [arc, setArc] = useState([0, 0, 0]);
     const [phase, setPhase] = useState('intro');
     const [status, setStatus] = useState(
-        'Nhìn kỹ nhé! Dưới 3 chiếc cốc bạc là 3 bao lì xì TIỀN MẶT THẬT (500K • 1 Triệu • 2 Triệu). Bắt trúng cốc nào, nhận ngay tiền đó! 💸'
+        'Nhìn kỹ nhé! Dưới 3 chiếc cốc bạc là 3 bao lì xì TIỀN MẶT THẬT (36K • 69K • 96K). Bắt trúng cốc nào, nhận ngay tiền đó! 💸'
     );
     const [dur, setDur] = useState(500);
     const [picked, setPicked] = useState(null);
@@ -1354,17 +1354,17 @@ function MagicCups({ burst }) {
                     Thử Thách 3 Chiếc Cốc Bạc 🎩
                 </h2>
 
-                <div className="grid grid-cols-3 gap-2 sm:gap-3 max-w-md mx-auto mb-4">
+                <div className="grid grid-cols-3 gap-1.5 sm:gap-3 max-w-md mx-auto mb-3 sm:mb-4 px-1">
                     {CONFIG.cashPrizes.map((p) => (
                         <div
                             key={p.code}
-                            className="rounded-2xl bg-gradient-to-br from-amber-50 via-rose-50 to-pink-100 border-2 border-amber-300/80 p-2 shadow-sm text-center"
+                            className="rounded-xl sm:rounded-2xl bg-gradient-to-br from-amber-50 via-rose-50 to-pink-100 border sm:border-2 border-amber-300/80 p-1.5 sm:p-2 shadow-sm text-center"
                         >
-                            <div className="flex items-center justify-center gap-1 text-amber-600 text-[11px] font-extrabold">
-                                <Banknote className="w-3.5 h-3.5" /> TIỀN MẶT
+                            <div className="flex items-center justify-center gap-0.5 sm:gap-1 text-amber-600 text-[9px] sm:text-[11px] font-extrabold">
+                                <Banknote className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> TIỀN MẶT
                             </div>
-                            <div className="text-lg sm:text-2xl font-black text-rose-600 neon-gold my-0.5">{p.amount}</div>
-                            <div className="text-[10px] font-bold text-gray-600 truncate">{p.label}</div>
+                            <div className="text-sm sm:text-2xl font-black text-rose-600 neon-gold my-0.5">{p.amount}</div>
+                            <div className="text-[8px] sm:text-[10px] font-bold text-gray-600 truncate">{p.label}</div>
                         </div>
                     ))}
                 </div>
@@ -1373,11 +1373,11 @@ function MagicCups({ burst }) {
                     {status}
                 </p>
 
-                <div className="relative rounded-[28px] bg-gradient-to-b from-[#0b462c] via-[#13653f] to-[#08331f] p-5 sm:p-8 shadow-[inset_0_4px_30px_rgba(0,0,0,0.65)] border-4 border-[#232733] overflow-hidden">
+                <div className="cup-table-mobile relative rounded-[28px] bg-gradient-to-b from-[#0b462c] via-[#13653f] to-[#08331f] p-4 sm:p-8 shadow-[inset_0_4px_30px_rgba(0,0,0,0.65)] border-3 sm:border-4 border-[#232733] overflow-hidden">
                     <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-56 bg-amber-200/15 rounded-full blur-2xl pointer-events-none" />
-                    <div className="flex justify-center mb-3">
+                    <div className="flex justify-center mb-2.5 sm:mb-3">
                         <div
-                            className={`px-4 py-1.5 rounded-full text-xs font-extrabold border transition-all ${phase === 'hyper'
+                            className={`px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-extrabold border transition-all ${phase === 'hyper'
                                 ? 'bg-rose-600 text-white border-rose-300 animate-pulse shadow-[0_0_20px_#f43f5e]'
                                 : 'bg-black/40 text-amber-200 border-white/15'
                                 }`}
@@ -1387,7 +1387,7 @@ function MagicCups({ burst }) {
                         </div>
                     </div>
 
-                    <div className="relative h-52 sm:h-56 max-w-md mx-auto">
+                    <div className="cup-box-mobile relative h-48 sm:h-56 max-w-md mx-auto">
                         {[0, 1, 2].map((id) => {
                             const a = arc[id];
                             const liftedPick = (phase === 'test_done' || phase === 'revealed') && picked === id;
@@ -1412,25 +1412,25 @@ function MagicCups({ burst }) {
                                             }`}
                                     >
                                         {showAllUnder && (
-                                            <div className="px-2.5 py-1.5 rounded-2xl bg-gradient-to-br from-amber-300 via-rose-500 to-pink-600 p-0.5 shadow-[0_0_25px_#fbbf24] animate-bounce">
-                                                <div className="bg-white rounded-[12px] px-2.5 py-1 flex flex-col items-center">
-                                                    <span className="text-[9px] font-extrabold text-amber-600">💸 TIỀN MẶT</span>
-                                                    <span className="text-base sm:text-lg font-black text-rose-600 leading-none">
+                                            <div className="px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-xl sm:rounded-2xl bg-gradient-to-br from-amber-300 via-rose-500 to-pink-600 p-0.5 shadow-[0_0_20px_#fbbf24] animate-bounce">
+                                                <div className="bg-white rounded-[10px] sm:rounded-[12px] px-2 py-0.5 sm:px-2.5 sm:py-1 flex flex-col items-center">
+                                                    <span className="text-[8px] sm:text-[9px] font-extrabold text-amber-600">💸 TIỀN MẶT</span>
+                                                    <span className="text-xs sm:text-lg font-black text-rose-600 leading-none">
                                                         {initPrize.amount}
                                                     </span>
                                                 </div>
                                             </div>
                                         )}
                                         {phase === 'test_done' && liftedPick && (
-                                            <div className="px-3 py-1.5 rounded-xl bg-white/95 text-rose-600 font-extrabold text-xs shadow-lg animate-bounce">
+                                             <div className="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-xl bg-white/95 text-rose-600 font-extrabold text-[11px] sm:text-xs shadow-lg animate-bounce whitespace-nowrap">
                                                 🧸 Nháp thôi nha!
                                             </div>
                                         )}
                                         {phase === 'revealed' && liftedPick && prize && (
-                                            <div className="w-20 h-16 rounded-2xl bg-gradient-to-br from-amber-300 via-rose-500 to-pink-600 p-0.5 shadow-[0_0_30px_#fbbf24] animate-bounce">
-                                                <div className="w-full h-full bg-white rounded-[14px] flex flex-col items-center justify-center">
-                                                    <span className="text-[9px] font-extrabold text-amber-600">💸 TIỀN MẶT</span>
-                                                    <span className="text-base sm:text-lg font-black text-rose-600 leading-none">
+                                            <div className="px-3 py-1.5 sm:w-20 sm:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-br from-amber-300 via-rose-500 to-pink-600 p-0.5 shadow-[0_0_25px_#fbbf24] animate-bounce">
+                                                <div className="w-full h-full bg-white rounded-[10px] sm:rounded-[14px] px-2 py-1 flex flex-col items-center justify-center">
+                                                    <span className="text-[8px] sm:text-[9px] font-extrabold text-amber-600">💸 TIỀN MẶT</span>
+                                                    <span className="text-sm sm:text-lg font-black text-rose-600 leading-none whitespace-nowrap">
                                                         {prize.amount}
                                                     </span>
                                                 </div>
@@ -1491,22 +1491,22 @@ function MagicCups({ burst }) {
                         {prize.desc} — Hãy gửi mã số này cho <b>{CONFIG.boyfriendName}</b> để nhận thưởng ngay nhé!
                     </p>
 
-                    <div className="bg-gradient-to-br from-pink-50 to-rose-100 rounded-3xl p-6 max-w-md mx-auto border-2 border-dashed border-rose-300 mb-4 shadow-inner">
-                        <p className="text-xs font-extrabold tracking-wider text-rose-500">
+                    <div className="bg-gradient-to-br from-pink-50 to-rose-100 rounded-2xl sm:rounded-3xl p-4 sm:p-6 max-w-md mx-auto border-2 border-dashed border-rose-300 mb-3 sm:mb-4 shadow-inner">
+                        <p className="text-[11px] sm:text-xs font-extrabold tracking-wider text-rose-500">
                             GIẢI THƯỞNG TIỀN MẶT CỦA CÔNG CHÚA
                         </p>
-                        <div className="text-4xl sm:text-5xl font-black text-rose-600 neon-gold my-2">
+                        <div className="text-3xl sm:text-5xl font-black text-rose-600 neon-gold my-1.5 sm:my-2">
                             {prize.amount}
                         </div>
-                        <span className="inline-block px-3.5 py-1 rounded-full bg-white text-rose-600 text-xs font-bold shadow-sm mb-3">
+                        <span className="inline-block px-3 py-0.5 sm:px-3.5 sm:py-1 rounded-full bg-white text-rose-600 text-[11px] sm:text-xs font-bold shadow-sm mb-2.5 sm:mb-3">
                             {prize.label} • {prize.desc}
                         </span>
 
-                        <div className="pt-3 border-t border-rose-200/80">
-                            <span className="text-[11px] font-extrabold text-gray-500 block mb-1">
+                        <div className="pt-2.5 sm:pt-3 border-t border-rose-200/80">
+                            <span className="text-[10px] sm:text-[11px] font-extrabold text-gray-500 block mb-1">
                                 MÃ XÁC THỰC ĐỘC QUYỀN (16 KÝ TỰ):
                             </span>
-                            <div className="text-sm sm:text-base font-black text-rose-700 font-mono tracking-wider select-all bg-white/90 py-1.5 px-3 rounded-xl border border-rose-200 inline-block shadow-sm">
+                            <div className="text-xs sm:text-base font-black text-rose-700 font-mono tracking-wider select-all bg-white/90 py-1 sm:py-1.5 px-2.5 sm:px-3 rounded-lg sm:rounded-xl border border-rose-200 inline-block shadow-sm">
                                 {prize.code}
                             </div>
                         </div>
@@ -1770,6 +1770,15 @@ export default function App() {
         .letter-scroll::-webkit-scrollbar { width: 6px; }
         .letter-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,.85); border-radius: 99px; }
         .letter-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,.22); border-radius: 99px; }
+
+        @media (max-width: 640px) {
+          .cup-table-mobile {
+            padding: 12px 6px !important;
+          }
+          .cup-box-mobile {
+            height: 195px !important;
+          }
+        }
       `}</style>
 
             <Confetti rain={step === 'cake_letter'} burst={burst} />

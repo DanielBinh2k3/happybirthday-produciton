@@ -32,9 +32,9 @@ Trang web chúc mừng sinh nhật người yêu được thiết kế đặc bi
 
 ### 🎩 Màn 4: Ảo thuật 3 Chiếc Cốc Bạc (Trúng Tiền Mặt Lì Xì)
 - **3 Cốc bạc tương ứng 3 mức tiền mặt may mắn**:
-  - 💸 **500.000đ** (Lộc Phát May Mắn)
-  - 💸 **1.000.000đ** (Tình Yêu Vĩnh Cửu)
-  - 💸 **2.000.000đ** (Đại Lộc Phú Quý)
+  - 💸 **36.000đ** (Lộc Phát May Mắn)
+  - 💸 **69.000đ** (Tình Yêu Vĩnh Cửu)
+  - 💸 **96.000đ** (Đại Lộc Phú Quý)
 - Gồm 2 vòng chơi: **Vòng thử nháp (chậm)** và **Vòng thật tốc độ cao (Siêu tốc độ)**.
 - Khi người chơi chọn mở cốc trúng giải:
   - Hiển thị số tiền mặt may mắn cùng **Mã xác thực độc quyền 16 ký tự** (VD: `LOVE-7C3A-DF91-88E4`).

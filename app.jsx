@@ -1306,8 +1306,9 @@ function MagicCups({ burst }) {
         } else if (phase === 'pick_real') {
             snd.fanfare();
             setPicked(id);
-            // id là cốc gốc, đi theo cốc dù đã bị tráo => số trúng khớp với cốc đã chọn
-            const chosen = CONFIG.cashPrizes[id];
+            // Thuật toán Random hoàn toàn: bốc ngẫu nhiên 1 trong 3 phong bao tiền mặt
+            const randomPrizeIndex = Math.floor(Math.random() * CONFIG.cashPrizes.length);
+            const chosen = CONFIG.cashPrizes[randomPrizeIndex];
             setPrize(chosen);
             setPhase('revealed');
             setStatus(`🎉 Chúc mừng công chúa! Em đã mở trúng bao lì xì TIỀN MẶT ${chosen.amount}!! 💸`);
@@ -1460,11 +1461,6 @@ function MagicCups({ burst }) {
                     {phase === 'test_done' && (
                         <Btn onClick={startReal} className="from-purple-600 via-pink-600 to-rose-500">
                             <Flame className="w-5 h-5" /> Chơi Vòng Thật (Siêu Tốc Độ) ⚡
-                        </Btn>
-                    )}
-                    {phase === 'revealed' && (
-                        <Btn onClick={startReal}>
-                            <RefreshCw className="w-4 h-4" /> Tráo lại lần nữa
                         </Btn>
                     )}
                     {['closing', 'practice', 'hyper'].includes(phase) && (

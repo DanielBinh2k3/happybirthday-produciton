@@ -5,10 +5,13 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 1810,
-    host: true
+    host: true,
+    allowedHosts: ['mydarling.danieltruongai.com', '.danieltruongai.com']
   },
   preview: {
     port: 1810,
-    host: true
+    host: true,
+    allowedHosts: ['mydarling.danieltruongai.com', '.danieltruongai.com']
   }
 });
+

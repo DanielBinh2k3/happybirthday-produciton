@@ -1,61 +1,92 @@
-# 🎉 Happy Birthday Production Web App
+# 💖 Happy Birthday Interactive Surprise Web App
 
-Trang web chúc mừng sinh nhật người yêu được thiết kế đặc biệt với trải nghiệm tương tác liền mạch, lãng mạn và ngập tràn bất ngờ 💖.
-
----
-
-## 🔐 1. Mật mã mở cổng (Passcode)
-- **Mật mã mặc định**: `18102021` (Định dạng chấp nhận linh hoạt: `18102021`, `18/10/2021`, `18.10.2021` hoặc `18-10-2021`).
-- **Gợi ý (Hint)**: *"Ngày đặc biệt tụi mình chính thức quen nhau (đủ ngày tháng năm nhé) 💕"*.
+A modern, responsive, and romantic interactive web application crafted for birthday surprises, featuring customized 3D animation, ambient lofi/anime music, interactive mini-games, and gift redemption.
 
 ---
 
-## 🎮 2. Các màn chơi & Trải nghiệm tương tác
+## ✨ Features Showcase
 
-### ✨ Màn 1: Cổng bí mật & Lời chào ngọt ngào
-- Lời thoại gõ máy từng ký tự (Typewriter effect) chào mừng công chúa.
-- Nhập đúng mật mã để mở cổng, tự động phát nhạc sinh nhật Nhật Bản lãng mạn (*Happy Birthday Japanese Theme*).
+### 🔐 1. Secret Passcode Gate
+- **Typewriter introduction** guiding the recipient through a personal verification ritual.
+- **Demo Passcode**: `18102022` *(Supports flexible formats: `18.10.2022`, `18/10/2022`, `18-10-2022`, or `18102022`)*.
+- **Demo Hint**: *"Hint: Our special anniversary date (DDMMYYYY) 💕"*.
 
-### 📸 Màn 2: Bộ sưu tập ảnh kỷ niệm Polaroid
-- **Solo Photos**: Ngắm nhìn những khoảnh khắc rạng rỡ của bạn gái với hiệu ứng chạm zoom to xem chi tiết ảnh polaroid.
-- **Together Photos**: Hành trình những kỷ niệm ngọt ngào của hai người từ những ngày đầu bên nhau.
+### 📸 2. Polaroid Memories Gallery
+- **Solo Gallery**: Beautiful Polaroid-styled photos with smooth hover tilt and full-screen lightbox zoom.
+- **Together Gallery**: Chronological milestone moments of your love journey.
 
-### 🎂 Màn 3A: Thử thách thổi nến sinh nhật lò xo
-- Mini-game bấm/chạm nhanh (tap frenzy) tạo sức gió thổi nến.
-- Tự động chuyển đổi giai điệu Happy Birthday nhạc hộp âm thanh Web Audio du dương khi đến lượt ước và thổi nến.
-- Khi nến tắt, hiệu ứng pháo hoa giấy (confetti) và bóng bay bay lượn ngập tràn màn hình.
+### 🎂 3. Spring-Loaded Birthday Cake & Candle Blowing
+- Interactive **tap-frenzy wind mechanic**: Tap rapidly to build wind power to blow out candles.
+- Plays an authentic chime, blows out smoke particle animations, and triggers festive confetti & balloons.
 
-### 💌 Màn 3B: Bức thư & Thiệp 3D lật sách
-- Thiệp chúc mừng sinh nhật 3D với hiệu ứng lật mở bìa sách hai mặt cực kỳ mượt mà.
-- Hỗ trợ đổi ảnh đại diện trên bìa thiệp khi chạm vào.
-- Tự động căn chỉnh chế độ đọc chữ to rõ nét trên điện thoại (Mobile Friendly).
+### 💌 4. 3D Flipping Greeting Card
+- A realistic **3D double-page flip book card** with perspective depth, custom wax seal aesthetic, and responsive single-page mode optimized for mobile phones.
 
-### 🎩 Màn 4: Ảo thuật 3 Chiếc Cốc Bạc (Trúng Tiền Mặt Lì Xì)
-- **3 Cốc bạc tương ứng 3 mức tiền mặt may mắn**:
-  - 💸 **36.000đ** (Lộc Phát May Mắn)
-  - 💸 **69.000đ** (Tình Yêu Vĩnh Cửu)
-  - 💸 **96.000đ** (Đại Lộc Phú Quý)
-- Gồm 2 vòng chơi: **Vòng thử nháp (chậm)** và **Vòng thật tốc độ cao (Siêu tốc độ)**.
-- Khi người chơi chọn mở cốc trúng giải:
-  - Hiển thị số tiền mặt may mắn cùng **Mã xác thực độc quyền 16 ký tự** (VD: `LOVE-7C3A-DF91-88E4`).
-  - Bấm nút **"Gửi Mã Nhận Tiền Qua Messenger 💌"** sẽ tự động sao chép mã trúng thưởng và mở ngay cửa sổ Messenger của bạn trai để nhận lì xì!
+### 🎩 5. Magic 3 Shell Cups Mini-Game (Prize Redemption)
+- **High-speed cup shuffle challenge** with two stages: Practice mode (slow) and Real speed mode (hyper shuffle).
+- **Randomized Prize Algorithm**: Picks one of three surprise gifts upon selection.
+- Generates a **unique 16-character hex coupon code** (e.g. `LOVE-7C3A-DF91-88E4`) and provides a single-tap button to copy the code and directly open Messenger.
 
 ---
 
-## 🚀 3. Hướng dẫn chạy cục bộ
+## 🛠️ Quick Start & Installation
 
+### Prerequisites
+- [Node.js](https://nodejs.org/) (version 18+ recommended)
+- `npm` or `pnpm`
+
+### 1. Clone the repository
 ```bash
-# 1. Cài đặt thư viện
+git clone https://github.com/DanielBinh2k3/happybirthday-produciton.git
+cd happybirthday-produciton
+```
+
+### 2. Install dependencies
+```bash
 npm install
+```
 
-# 2. Chạy môi trường dev
+### 3. Run the development server
+```bash
 npm run dev
+```
+Open your browser at `http://localhost:1810/` to test.
 
-# 3. Đóng gói bản production
+### 4. Build for Production
+```bash
 npm run build
+```
+Production assets will be generated in the `dist/` directory.
+
+---
+
+## ⚙️ Customization Guide
+
+All personal configuration is organized at the top of [`app.jsx`](./app.jsx) in the `CONFIG` object:
+
+```javascript
+const CONFIG = {
+    passcodeDigits: "18102022",              // Change to your date/passcode
+    passcodeHint: "Your custom hint here",
+    boyfriendName: "Your Name",
+    girlfriendName: "Partner Name",
+    boyfriendContactUrl: "https://m.me/your_facebook_id", // Your Messenger/Telegram link
+
+    // Background music & custom sound effects
+    bgmOptions: [ ... ],
+
+    // Photos: Unsplash ID strings or local paths (/assets/...)
+    soloPhotos: [ ... ],
+    togetherPhotos: [ ... ],
+
+    // Stage 4 prize rewards
+    cashPrizes: [ ... ]
+};
 ```
 
 ---
 
-## 🛠️ 4. Tùy chỉnh thông tin cá nhân
-Toàn bộ thông tin tên gọi, ngày quen nhau, link liên hệ Messenger, ảnh và giải thưởng đều có thể tùy chỉnh trực tiếp tại phần `CONFIG` ở đầu file `app.jsx`.
+## 🛡️ License
+
+This project is open-sourced under the [MIT License](LICENSE).
+Feel free to fork, customize, and create memorable moments for your loved ones! 💖

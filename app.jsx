@@ -11,24 +11,25 @@ import {
 const U = (id) => (id.startsWith('/') || id.startsWith('http')) ? id : `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=600&q=80`;
 
 const CONFIG = {
-    passcodeDigits: "18102022", // Chấp nhận: 18.10.2022, 18/10/2022, 18-10-2022, 18102022
-    passcodeHint: "Gợi ý nhỏ: Ngày đặc biệt tụi mình chính thức quen nhau (đủ ngày tháng năm nhé) 💕",
-    boyfriendName: "Anh Người Yêu",
-    girlfriendName: "Công Chúa",
-    boyfriendContactUrl: "https://m.me/100046166451971",
+    // 🔐 Passcode digits (Default demo passcode: 18102022)
+    passcodeDigits: "18102022",
+    passcodeHint: "Hint: Our special anniversary date (DDMMYYYY) 💕",
+    boyfriendName: "Your Boyfriend",
+    girlfriendName: "My Princess",
+    boyfriendContactUrl: "https://m.me/",
 
     bgmOptions: [
         {
-            id: 'hbd_japanese',
-            title: '🌸 Happy Birthday (Japanese Version)',
-            artist: 'Japanese Birthday Theme',
-            src: '/assets/happybirthdayjapanese.mp3'
+            id: 'anime_sparkle',
+            title: '✨ Sparkle ~ Kimi no Na wa (Your Name)',
+            artist: 'Anime Romantic Piano',
+            src: 'https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3'
         }
     ],
 
     gifs: {
-        wave: "/assets/cat_anim.gif",
-        hug: "/assets/magic_cat.gif",
+        wave: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXp5d3R5bm95NnJ6c3R4b3B6eHBoZnJ5eG54eG54eG54eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/MDJ9IbxxvDUQM/giphy.gif",
+        hug: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z4amJ5eG54eG54eG54eG54eG54eG54eG54eG54eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/od5H3PmEG5EVq/giphy.gif",
         kiss: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXp5d3R5bm95NnJ6c3R4b3B6eHBoZnJ5eG54eG54eG54eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KmxmoHUGPDjfQXqGgv/giphy.gif",
         cake: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXp5d3R5bm95NnJ6c3R4b3B6eHBoZnJ5eG54eG54eG54eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/He4wudo59enf2/giphy.gif",
         magic: "/assets/tenor_cat.gif"
@@ -36,78 +37,72 @@ const CONFIG = {
 
     floatingQuotes: [
         "🎵 Cause all of me loves all of you... 💫",
-        "Anh yêu em hơn hôm qua, và ít hơn ngày mai 🌙",
+        "Loving you more with each passing day 🌙",
         "🎵 Take my hand, take my whole life too... 💖",
-        "Em là điều dịu dàng nhất thế gian này 🌷",
+        "You are the gentlest magic in this world 🌷",
         "🎵 I love you 3000 & to the moon and back 🌙",
-        "Có em bên cạnh, ngày bình thường cũng hoá phép màu ✨",
-        "Mãi là cô công chúa nhỏ được anh cưng chiều 🌸",
-        "Tuổi mới rực rỡ và cười thật tươi nhé 🎂",
+        "With you, ordinary days turn into miracles ✨",
+        "Forever my sweet princess 🌸",
+        "Wishing you a year filled with smiles and joy 🎂",
         "🎵 You are my sunshine, my only sunshine ☀️",
-        "Cảm ơn vũ trụ đã mang em đến bên anh 💌"
+        "Thank you for being in my life 💌"
     ],
 
     gateIntroLines: [
-        "Khoan đã, chờ một chút! 👋",
-        "Trang web nhỏ này chỉ dành riêng cho một người đặc biệt..."
+        "Wait a moment! 👋",
+        "This special little website was crafted for someone very special..."
     ],
 
     hero: {
         title: "Happy Birthday, My Love! 🎂",
-        subtitle: "Chúc mừng sinh nhật cô gái tuyệt vời nhất thế gian. Cảm ơn em vì đã bước vào cuộc đời anh và biến mỗi ngày trôi qua đều ngập tràn tiếng cười.",
-        buttonText: "Sẵn sàng khám phá bất ngờ chưa?"
+        subtitle: "Happy Birthday to the most amazing girl. Thank you for stepping into my world and filling every single day with happiness and love.",
+        buttonText: "Ready to discover your surprise?"
     },
 
-    soloTitle: "Cô Gái Xinh Đẹp Nhất Hôm Nay",
-    soloSubtitle: "Chạm vào từng tấm ảnh Polaroid để ngắm kỹ hơn nhé ✨",
+    soloTitle: "The Prettiest Girl in the World",
+    soloSubtitle: "Tap each Polaroid photo to view closely ✨",
     soloPhotos: [
-        ["/assets/photo_new.jpeg", "Nụ cười tỏa nắng ☀️"],
-        ["1517841905240-472988babdf9", "Xinh đẹp mọi góc nhìn ✨"],
-        ["1524504388940-b1c1722653e1", "Công chúa của anh 👑"],
-        ["1494790108377-be9c29b29330", "Đáng yêu vô đối 🥰"],
-        ["1529626455594-4ff0802cfb7e", "Birthday Girl rực rỡ 🎂"],
-        ["1488426862026-3ee34a7d66df", "Ánh mắt làm anh say 💕"],
-        ["1507003211169-0a1dd7228f2d", "Dịu dàng như mùa thu 🌸"],
-        ["1544005313-94ddf0286df2", "Mãi tươi trẻ nhé 💖"],
-        ["1531746020798-e6953c6e8e04", "My Favorite Person 🌷"]
+        ["1534528741775-53994a69daeb", "Radiant Smile ☀️"],
+        ["1517841905240-472988babdf9", "Gorgeous Angle ✨"],
+        ["1524504388940-b1c1722653e1", "My Princess 👑"],
+        ["1494790108377-be9c29b29330", "Super Cute 🥰"],
+        ["1529626455594-4ff0802cfb7e", "Shining Birthday Girl 🎂"],
+        ["1488426862026-3ee34a7d66df", "Eyes of Wonder 💕"]
     ],
 
-    togetherTitle: "Hành Trình Tụi Mình Bên Nhau",
-    togetherSubtitle: "Từ ngày ấy đến mãi về sau... 💑",
+    togetherTitle: "Our Beautiful Journey",
+    togetherSubtitle: "From the first day to forever... 💑",
     togetherPhotos: [
-        ["1518199266791-5375a83190b7", "Ngày bắt đầu 💑"],
-        ["1516589178581-6cd7833ae3b2", "Những chuyến đi ✈️"],
-        ["1522673607200-164d1b6ce486", "Nắm chặt tay anh 🤝"],
-        ["1511285560929-80b456fea0bc", "Cười quên lối về 😆"],
-        ["1474552226712-ac0f0961a954", "Hoàng hôn lãng mạn 🌅"],
-        ["1494774157365-9e04c6720e47", "Hẹn hò cuối tuần 🧋"],
-        ["1529333166437-7750a6dd5a70", "Bình yên bên em 🏡"],
-        ["1501901609772-df0848060b33", "Kỷ niệm ngọt ngào 🍬"],
-        ["1513279922550-250c2129b13a", "Mãi bên nhau nhé 💍"]
+        ["1518199266791-5375a83190b7", "Where It All Began 💑"],
+        ["1516589178581-6cd7833ae3b2", "Our Adventures ✈️"],
+        ["1522673607200-164d1b6ce486", "Holding Hands 🤝"],
+        ["1511285560929-80b456fea0bc", "Pure Happiness 😆"],
+        ["1474552226712-ac0f0961a954", "Romantic Sunsets 🌅"],
+        ["1513279922550-250c2129b13a", "Forever & Always 💍"]
     ],
 
-    cardCoverDear: "Dear Công Chúa",
+    cardCoverDear: "Dear Princess",
     cardCoverSub: "A purr-fect message just for you...",
     letterHeader: "To You!",
-    letterGreeting: "Happy Birthday, Công Chúa ❤️",
+    letterGreeting: "Happy Birthday, My Love ❤️",
     letterParagraphs: [
-        "Từ khoảnh khắc tụi mình gặp nhau, cuộc sống của anh đã rẽ sang một trang hoàn toàn mới — giống như vũ trụ âm thầm dẫn lối anh đến với người tuyệt vời nhất.",
-        "Em mang hơi ấm đến những góc nhỏ trong tim anh, và làm mỗi ngày của anh ngập tràn niềm vui. Chúc em tuổi mới luôn rạng rỡ, hạnh phúc và đạt được mọi ước mơ nhé!",
-        "Dù phía trước có bao nhiêu điều mới mẻ, anh sẽ luôn ở ngay đây nắm chặt tay em. Yêu em rất nhiều!"
+        "From the very moment we met, my life turned to a wonderful new chapter — as if the entire universe gently guided me to the most incredible person.",
+        "You bring warmth to every corner of my heart and make each day infinitely brighter. Wishing you a year filled with laughter, joy, and every dream come true!",
+        "No matter what tomorrow brings, I will always be right here by your side holding your hand tight. Love you so much!"
     ],
-    letterSignature: "Your Love, Anh Yêu 💖",
+    letterSignature: "Your Love, Forever 💖",
     cardPhotos: [
-        ["/assets/photo_new.jpeg", "Công chúa của anh 💕"],
-        ["1518199266791-5375a83190b7", "Ngày bắt đầu 💑"],
-        ["1516589178581-6cd7833ae3b2", "Những chuyến đi ✈️"],
-        ["1513279922550-250c2129b13a", "Mãi bên nhau nhé 💍"]
+        ["1534528741775-53994a69daeb", "My Princess 💕"],
+        ["1518199266791-5375a83190b7", "Where It Began 💑"],
+        ["1516589178581-6cd7833ae3b2", "Our Trips ✈️"],
+        ["1513279922550-250c2129b13a", "Forever 💍"]
     ],
 
-    // Giải thưởng tiền mặt (Màn 4) — cốc 0/1/2 tương ứng 36k/69k/96k
+    // Cash prizes (Stage 4)
     cashPrizes: [
-        { amount: "36.000đ", code: "HBD2026-9E4B-8F12", label: "Lộc Phát May Mắn", desc: "Bao lì xì tiền mặt 36.000đ may mắn 💸" },
-        { amount: "69.000đ", code: "LOVE-7C3A-DF91-88E4", label: "Tình Yêu Vĩnh Cửu", desc: "Bao lì xì tiền mặt 69.000đ ngọt ngào 💸" },
-        { amount: "96.000đ", code: "KISS-4B9F-83EC-71A0", label: "Đại Lộc Phú Quý", desc: "Bao lì xì tiền mặt 96.000đ siêu to 💸" }
+        { amount: "36.000đ", code: "HBD2026-9E4B-8F12", label: "Lucky Blessing", desc: "Lucky Birthday Gift 💸" },
+        { amount: "69.000đ", code: "LOVE-7C3A-DF91-88E4", label: "Endless Love", desc: "Sweet Anniversary Love Gift 💸" },
+        { amount: "96.000đ", code: "KISS-4B9F-83EC-71A0", label: "Grand Prosperity", desc: "Super Grand Fortune Gift 💸" }
     ]
 };
 
